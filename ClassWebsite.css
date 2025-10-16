@@ -1,0 +1,181 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 1000;
+}
+
+.header a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.header a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.header-left a {
+    margin-right: 50px;
+}
+
+.header-right a {
+    margin-left: 20px;
+}
+
+/* Dropdown Button (Image) */
+.dropbtn {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/* Change Dropdown Links on Hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the Dropdown Menu on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Slideshow Section Styles */
+.slideshow-section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('anime-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.mySlides {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, black, transparent);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 400px;
+    left: 150px;
+    width: 100%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
