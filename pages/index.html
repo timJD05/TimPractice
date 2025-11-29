@@ -1,78 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="ClassWebsite.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <title></title>
-    </head>
-    <body>
-        <div class="header">
-            <div class="header-left">
-                <a href="index.html">  </a>
-            </div>
-            <div class="header-right">
-                <a href="">Log In</a>
-                <a href="">Sign Up</a>
-                <div class="dropdown">
-                    <img src="icons8-menu-24.png" alt="Explore" class="explore-icon">
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                    <div>
-                        <img src="">
-                    </div>
-                    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ClassWebsite.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Wing Kingdom</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo">Wing Kingdom</a>
+        </div>
+
+        <div class="header-right">
+            <a href="">Log In</a>
+            <a href="">Sign Up</a>
+
+            <div class="dropdown">
+                <img src="icons8-menu-24.png" alt="Menu" class="explore-icon">
+
+                <div class="dropdown-content">
+                    <a href="#menu">Menu</a>
+                    <a href="#sauces">Sauces</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#order">Order Online</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <section class="slideshow-section">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <a href = "" class= "text" ></a>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <div class="slide-image" style="background-image: url('');"></div>
-                    <div class="text"></div>
-                </div>
-        
-    </body>
+    <!-- SLIDESHOW SECTION -->
+    <section class="slideshow-section">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('wing1.jpg');"></div>
+                <a href="#menu" class="text"> Welcome to Wing Kingdom — Home of Legendary Wings</a>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('wing2.jpg');"></div>
+                <div class="text"> 20+ Flavors — From Mild to Melt-Your-Soul Hot</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('wing3.jpg');"></div>
+                <div class="text"> Fresh Wings. Royal Flavor.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('sauces.jpg');"></div>
+                <div class="text"> New Limited-Time Sauces!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('platter.jpg');"></div>
+                <div class="text"> Wings, Fries, Drinks & More</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('storefront.jpg');"></div>
+                <div class="text"> Find Your Local Wing Kingdom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slide-image" style="background-image: url('family.jpg');"></div>
+                <div class="text"> Family Meals & Game-Day Packs</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- OPTIONAL SECTION UNDER SLIDER -->
+    <section class="welcome-section" id="menu">
+        <h1>Our Menu</h1>
+        <p>Choose your wings, pick your flavor, and join the Kingdom.</p>
+    </section>
+
+    <script src="slideshow.js"></script>
+</body>
 </html>
