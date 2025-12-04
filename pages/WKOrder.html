@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ClassWebsite.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Order Online — Wing Kingdom</title>
+</head>
+
+<body>
+
+    <!-- HEADER (same as other pages) -->
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo">Wing Kingdom</a>
+        </div>
+
+        <div class="header-right">
+            <div class="dropdown">
+                <img src="https://cdn-icons-png.flaticon.com/128/2767/2767162.png" alt="Menu" class="explore-icon">
+                <div class="dropdown-content">
+                    <a href="WKMenu.html">Menu</a>
+                    <a href="ChallengesWk.html">Challenges</a>
+                    <a href="WKOrder.html">Order Online</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORDER PAGE MAIN SECTION -->
+    <section class="order-section">
+        <div class="order-container">
+            <h1 class="order-title">Order Online</h1>
+            <p class="order-subtitle">Build your meal exactly how you like it.</p>
+
+            <form class="order-form">
+
+                <!-- Wing Flavor -->
+                <label>Choose Your Wing Flavor</label>
+                <select required>
+                    <option value="">Select flavor...</option>
+                    <option>Mild</option>
+                    <option>CUM</option>
+                    <option>Lemon Pepper</option>
+                    <option>Garlic Parmesan</option>
+                    <option>Honey BBQ</option>
+                    <option>Inferno Blast</option>
+                </select>
+
+                <!-- Wing Count -->
+                <label>How Many Wings?</label>
+                <select required>
+                    <option value="">Select amount...</option>
+                    <option>6 Wings</option>
+                    <option>10 Wings</option>
+                    <option>15 Wings</option>
+                    <option>20 Wings</option>
+                    <option>67 Wings</option>
+                </select>
+
+                <!-- Sides -->
+                <label>Choose a Side</label>
+                <select required>
+                    <option value="">Select side...</option>
+                    <option>Fries</option>
+                    <option>Curly Fries</option>
+                    <option>Onion Rings</option>
+                    <option>Dick & Cheese</option>
+                </select>
+
+                <!-- Name -->
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your dick.... name*" required>
+
+                <!-- Notes -->
+                <label>Special Instructions</label>
+                <textarea placeholder="Extra crispy, sauce on the side, etc."></textarea>
+
+                <!-- Submit -->
+                <button type="submit" class="order-submit">Place Order</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Fade & Footer -->
+    <div class="bottom-fade"></div>
+
+    <footer class="footer">
+        <div class="footer-title">Wing Kingdom © 2025</div>
+        <p>No Copyright Infringement Intended</p>
+        <p>All images belong to their respective owners</p>
+        <p>Website created for educational purposes</p>
+    </footer>
+
+</body>
+</html>
