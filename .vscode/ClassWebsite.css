@@ -1,0 +1,502 @@
+/* =======================
+   Global Styles
+======================= */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #45494e;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =======================
+   Header
+======================= */
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background: #381d1d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    box-sizing: border-box;
+}
+
+.header-left .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f7c600;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-right a {
+    color: #fff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.header-right a:hover {
+    color: #f7c600;
+}
+
+/* Dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.explore-icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #000;
+    min-width: 150px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    background: #222;
+    color: #f7c600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =======================
+   Homepage Slideshow
+======================= */
+
+.slideshow-section {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.text {
+    position: absolute;
+    left: 50px;
+    bottom: 50%;
+    padding: 15px 25px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0,0,0,.55);
+    border-radius: 8px;
+}
+
+/* Fade animation */
+
+.fade {
+    animation: fadeEffect 1.2s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: .3; }
+    to   { opacity: 1; }
+}
+
+/* =======================
+   Welcome Section
+======================= */
+
+.welcome-section {
+    background: #1C2321;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 40px;
+    color: #f7c600;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    opacity: .85;
+}
+
+/* =======================
+   Menu Page
+======================= */
+
+.menu-header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.menu-header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #f7c600;
+}
+
+.menu-category {
+    padding: 40px 20px;
+}
+
+.menu-category h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #000;
+    border-left: 8px solid #f7c600;
+    padding-left: 12px;
+}
+
+/* Menu grid */
+
+.menu-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.menu-item {
+    background: #fff;
+    border: 2px solid #f7c600;
+    border-radius: 12px;
+    padding: 20px;
+    transition: .3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,.15);
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.2);
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7c600;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: .8;
+}
+
+/* Mobile tweaks */
+
+@media (max-width: 700px) {
+    .text {
+        font-size: 22px;
+        left: 15px;
+        right: 15px;
+        bottom: 40px;
+    }
+}
+
+/* =======================
+   Challenges Page
+======================= */
+
+.challenge-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #1C2321;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.challenge-container {
+    max-width: 900px;
+    background: #2A2F36;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #FFD000;
+    text-align: center;
+}
+
+.challenge-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFD000;
+    margin-bottom: 10px;
+}
+
+.challenge-subtitle {
+    font-size: 22px;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.challenge-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+.fire-list {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.fire-list li {
+    margin-bottom: 10px;
+}
+
+.challenge-button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #FFD000;
+    border-radius: 10px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    transition: .25s;
+}
+
+.challenge-button:hover {
+    background: #ffea60;
+    transform: scale(1.05);
+}
+
+/* =======================
+   Footer
+======================= */
+
+.bottom-fade {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent 0%, #000 100%);
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 14px;
+    border-top: 3px solid #f7c600;
+}
+
+.footer .footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f7c600;
+}
+
+.footer p {
+    margin: 6px 0;
+    opacity: .85;
+}
+
+/* =======================
+   Order Page
+======================= */
+
+.order-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #1C2321;
+    padding: 60px 20px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.order-container {
+    max-width: 850px;
+    margin: auto;
+    background: #2A2F36;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #f7c600;
+}
+
+.order-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #f7c600;
+    text-align: center;
+}
+
+.order-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f7c600;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    padding: 12px;
+    background: #1C2321;
+    border: 2px solid #f7c600;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.order-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.order-submit {
+    margin-top: 10px;
+    padding: 14px;
+    background: #f7c600;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.order-submit:hover {
+    background: #ffea60;
+    transform: scale(1.05);
+}
+/* ===========================
+   Signature Deals Section
+=========================== */
+
+.signature-section {
+    width: 100%;
+    padding: 70px 20px;
+    background: #1C2321;
+    color: white;
+    text-align: center;
+}
+
+.signature-title {
+    font-size: 42px;
+    color: #f7c600;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.signature-subtitle {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.signature-item {
+    background: #2A2F36;
+    border: 2px solid #f7c600;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+.signature-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.3);
+}
+
+.signature-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.signature-info {
+    padding: 20px;
+}
+
+.signature-info h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.signature-info p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    opacity: .85;
+}
+
+.signature-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7c600;
+}
