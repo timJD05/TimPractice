@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- HEADER (same as other pages) -->
+    <!-- HEADER -->
     <div class="header">
         <div class="header-left">
             <a href="index.html" class="logo">Wing Kingdom</a>
@@ -81,10 +81,19 @@
                 <button type="submit" class="order-submit">Place Order</button>
             </form>
 
+            <!-- Receipt Section -->
+            <div class="receipt-container" style="display:none; margin-top:30px; background:#2A2F36; padding:20px; border: 3px solid #f7c600; border-radius:12px;">
+                <h2 style="color:#f7c600; text-align:center;">Your Receipt</h2>
+                <p><strong>Name:</strong> <span id="receipt-name"></span></p>
+                <p><strong>Wing Flavor:</strong> <span id="receipt-flavor"></span></p>
+                <p><strong>Wings:</strong> <span id="receipt-wings"></span></p>
+                <p><strong>Side:</strong> <span id="receipt-side"></span></p>
+                <p><strong>Special Instructions:</strong> <span id="receipt-notes"></span></p>
+                <p style="text-align:center; color:#f7c600; font-weight:700;">Thank you for your order!</p>
+            </div>
+
         </div>
     </section>
-
- 
 
     <footer class="footer">
         <div class="footer-title">Wing Kingdom © 2025</div>
@@ -92,6 +101,60 @@
         <p>All images belong to their respective owners</p>
         <p>Website created for educational purposes</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderForm = document.querySelector('.order-form');
+            const receiptContainer = document.querySelector('.receipt-container');
+
+            if (!orderForm || !receiptContainer) return;
+
+            // Handle form submission
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent page reload
+
+                // Get form values
+                const name = orderForm.querySelector('input[type="text"]').value;
+                const flavor = orderForm.querySelectorAll('select')[0].value;
+                const wings = orderForm.querySelectorAll('select')[1].value;
+                const side = orderForm.querySelectorAll('select')[2].value;
+                const notes = orderForm.querySelector('textarea').value;
+
+                // Validate selections
+                if (!name || !flavor || !wings || !side) {
+                    alert("Please fill out all required fields.");
+                    return;
+                }
+
+                // Save order in localStorage
+                const order = { name, flavor, wings, side, notes };
+                localStorage.setItem('lastOrder', JSON.stringify(order));
+
+                // Display receipt
+                document.getElementById('receipt-name').textContent = name;
+                document.getElementById('receipt-flavor').textContent = flavor;
+                document.getElementById('receipt-wings').textContent = wings;
+                document.getElementById('receipt-side').textContent = side;
+                document.getElementById('receipt-notes').textContent = notes || 'None';
+
+                receiptContainer.style.display = 'block';
+
+                // Reset form
+                orderForm.reset();
+            });
+
+            // Load last order if exists
+            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
+            if (lastOrder) {
+                document.getElementById('receipt-name').textContent = lastOrder.name;
+                document.getElementById('receipt-flavor').textContent = lastOrder.flavor;
+                document.getElementById('receipt-wings').textContent = lastOrder.wings;
+                document.getElementById('receipt-side').textContent = lastOrder.side;
+                document.getElementById('receipt-notes').textContent = lastOrder.notes || 'None';
+                receiptContainer.style.display = 'block';
+            }
+        });
+    </script>
 
 </body>
 </html>
